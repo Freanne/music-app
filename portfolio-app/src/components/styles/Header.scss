@@ -1,0 +1,149 @@
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    justify-content: center;
+    margin-left: 1rem;
+    
+}
+
+.header__logo{
+    
+    margin-top: 1.2rem;
+
+
+}
+
+.navbar{
+    margin-top: 25px;
+    margin-left: 5rem;
+   
+}
+
+ul{
+    display: flex;
+
+}
+
+li{
+    display: inline;
+    list-style: none;
+    margin: 1.2rem;
+    
+    a{
+        text-decoration: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
+
+        &:hover{
+            border-bottom: 3px solid red;
+        }
+    }
+    
+}
+
+.changer{
+    display: flex;
+    margin-right: 1.5rem;
+    .menu{
+        cursor: pointer;
+        margin-right: 1rem;
+        display: none;
+        
+    }
+
+}
+
+.closed{
+
+    .close{
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    
+    .header{
+        justify-content: space-between;
+    }
+    .navbar{
+        display: none;
+        transition: 1s ease;
+    }
+    .navbar.active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        inset: 0;
+        background: white;
+        transition: 1400ms ease;
+    }
+    ul{
+        margin: 0 auto;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1rem ;
+        li{
+            margin-block: 2rem;
+            a{
+                font-size: 20px;
+                color: #000;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .changer{
+        .menu{
+            margin-top: 10px;
+            display: block;
+        }
+    }
+    .closed{
+        .close{
+            display: block;
+        }
+        .header__logo{
+            margin-left: 25rem;
+        }
+    }
+
+    @media (max-width:35px) {
+
+        ul{
+            margin: 0 auto;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 1rem ;
+            li{
+                margin-block: 2rem;
+                a{
+                    font-size: 20px;
+                    color: #000;
+                    font-weight: bolder;
+                }
+            }
+        }
+    
+        .changer{
+            .menu{
+                display: block;
+                margin-right: 0;
+            }
+        }
+        // .closed{
+        //     .close{
+        //         display: block;
+        //     }
+        //     .header__logo{
+        //         margin-left: .450rem;
+        //     }
+        // }
+    }
+
+}
+
